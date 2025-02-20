@@ -32,6 +32,7 @@ function App() {
             backgroundColor: 'rgba(0, 0, 0, 0.5)', // Optional: adds a dark overlay
             backgroundBlend: 'overlay'
           }}>
+            <h1 className='text-4xl font-bold text-white'>Welcome to UniGuide !</h1>
           <button
             onClick={() => loginWithRedirect()}
             className="px-8 py-4 text-xl font-semibold text-white bg-blue-600 rounded-lg shadow-lg transition-colors duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 hover:shadow-xl"
