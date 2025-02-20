@@ -1,5 +1,6 @@
 {
   "name": "project",
+  "homepage": "https://shubham-guptaaa.github.io/UniGuide/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.3.0",
@@ -16,6 +19,7 @@
     "@mantine/hooks": "^7.17.0",
     "@react-google-maps/api": "^2.20.6",
     "@tabler/icons-react": "^3.30.0",
+    "gh-pages": "^6.3.0",
     "leaflet": "^1.9.4",
     "project": "file:",
     "react": "^19.0.0",
