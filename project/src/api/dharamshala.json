@@ -1,0 +1,107 @@
+[
+    {
+      "name": "Shree Tilakdwar Aggarwal Dharmshala",
+      "location": {
+        "area": "Holi Gate",
+        "city": "Mathura",
+        "state": "Uttar Pradesh"
+      },
+      "amenities": ["AC and Non-AC rooms", "Meals", "Hot water", "Clean drinking water", "Flexible check-in/check-out"],
+      "contact_info": {
+        "phone": "+91-120-123-4568",
+        "website": "https://yatradham.org/aggarwal-dharamshala-mathura.html"
+      }
+    },
+    {
+      "name": "Pushti Bhavan Dharamshala",
+      "location": {
+        "area": "Near Vishram Ghat",
+        "city": "Mathura",
+        "state": "Uttar Pradesh"
+      },
+      "amenities": ["Clean and well-maintained rooms", "Meals", "CCTV cameras", "Hot water", "Clean drinking water", "Flexible check-in/check-out"],
+      "contact_info": {
+        "phone": "+91-120-123-4569",
+        "website": "https://yatradham.org/mathura-pushti-bhavan-dharamshala.html"
+      }
+    },
+    {
+      "name": "Hariram Jalaram Dharamshala",
+      "location": {
+        "area": "Choubey Para",
+        "city": "Mathura",
+        "state": "Uttar Pradesh"
+      },
+      "amenities": ["Basic accommodations", "Proximity to major temples"],
+      "contact_info": {
+        "phone": "+91-9319501323",
+        "website": "https://mathura.idbf.in/dharamshala"
+      }
+    },
+    {
+      "name": "Mathura Chourasi Digambar Jain Mandir",
+      "location": {
+        "area": "NH 2 Bhuteshwar Road",
+        "city": "Mathura",
+        "state": "Uttar Pradesh"
+      },
+      "amenities": ["Food facility with fresh vegetarian food", "Only Jain devotees allowed"],
+      "contact_info": {
+        "phone": "+91-120-123-4570",
+        "website": "https://nomadsaikat.com/dharamshala-in-mathura/"
+      }
+    },
+    {
+      "name": "Kadiya Dharamshala",
+      "location": {
+        "area": "Near Mathura Train Station",
+        "city": "Mathura",
+        "state": "Uttar Pradesh"
+      },
+      "amenities": ["Free Wi-Fi", "Air-conditioned rooms", "Terrace", "Balcony", "Private parking (extra charge)"],
+      "contact_info": {
+        "phone": "+91-120-123-4571",
+        "website": "https://www.booking.com/hotel/in/kadiya-dharamshala-mathura.html"
+      }
+    },
+    {
+      "name": "Jammu Hari Bhavan Raghunath Mandir Dharamshala",
+      "location": {
+        "area": "Near Raghunath Mandir",
+        "city": "Jammu",
+        "state": "Jammu and Kashmir"
+      },
+      "amenities": ["Affordable accommodations", "Proximity to Raghunath Mandir"],
+      "contact_info": {
+        "phone": "+91-120-123-4572",
+        "website": "https://yatradham.org/yatradham-destinations/jammu-kashmir/jammu.html"
+      }
+    },
+    {
+      "name": "Jammu Bharat Sevashram Sangha",
+      "location": {
+        "area": "Central Jammu",
+        "city": "Jammu",
+        "state": "Jammu and Kashmir"
+      },
+      "amenities": ["Basic accommodations", "Proximity to city center"],
+      "contact_info": {
+        "phone": "+91-120-123-4573",
+        "website": "https://yatradham.org/yatradham-destinations/jammu-kashmir/jammu.html"
+      }
+    },
+    {
+      "name": "Jammu Guru Nanak Devji Gurudwara Dharamshala",
+      "location": {
+        "area": "Near Railway Station",
+        "city": "Jammu",
+        "state": "Jammu and Kashmir"
+      },
+      "amenities": ["Affordable accommodations", "Proximity to railway station"],
+      "contact_info": {
+        "phone": "+91-120-123-4574",
+        "website": "https://yatradham.org/yatradham-destinations/jammu-kashmir/jammu.html"
+      }
+    }
+  ]
+  
