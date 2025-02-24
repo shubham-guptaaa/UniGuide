@@ -23,7 +23,7 @@ const Map = () => {
   
   const mapContainerStyle = {
     width: '100%',
-    height: '100vh'
+    height: '100%'
   };
   
   const center = {
@@ -87,77 +87,91 @@ const Map = () => {
   };
 
   return (
-    <div className="relative w-full h-screen">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-[1000] bg-white/80 backdrop-blur-sm shadow-lg p-4">
-        <div className="container flex gap-4 items-center mx-auto">
-          {/* Back Button */}
-          <button
-            onClick={() => navigate('/')}
-            className="flex gap-2 items-center px-4 py-2 bg-white rounded-full shadow-lg transition-colors hover:bg-gray-100"
-          >
-            <IoArrowBack /> 
-          </button>
+    <div className="relative w-full h-full">
+      {/* Back button */}
+      <button 
+        onClick={() => navigate('/')} 
+        className="absolute top-4 left-4 z-[1000] p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+      >
+        <IoArrowBack size={24} className="text-gray-700" />
+      </button>
 
-          {/* Search Bar */}
-          <form onSubmit={handleSearch} className="flex flex-1 gap-2 mx-auto max-w-2xl">
+      {/* Enhanced search bar */}
+      <div className="absolute top-4 left-16 z-[1000] w-72">
+        <form onSubmit={handleSearch} className="w-full">
+          <div className="relative">
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search for a location..."
-              className="px-4 py-2 w-full rounded-full border border-gray-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Search location..."
+              className="w-full pl-4 pr-10 py-2.5 rounded-full shadow-lg border border-gray-300 
+                       focus:outline-none focus:ring-2 focus:ring-blue-500 
+                       bg-white/90 backdrop-blur-sm"
             />
-            <button
-              type="submit"
-              className="px-6 py-2 text-white bg-blue-500 rounded-full shadow-lg transition-colors hover:bg-blue-600"
+            <button 
+              type="submit" 
+              className="absolute right-2 top-1/2 p-2 rounded-full transition-colors -translate-y-1/2 hover:bg-gray-100"
             >
-              Search
+              <svg 
+                className="w-5 h-5 text-gray-500" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" 
+                />
+              </svg>
             </button>
-          </form>
-        </div>
-      </header>
-
-      {/* Map */}
-      <MapContainer
-        center={[center.lat, center.lng]}
-        zoom={13}
-        style={mapContainerStyle}
-        ref={setMapRef}
-        zoomControl={false}
-      >
-        <ZoomControl position="bottomright" />
-        <TileLayer
-          url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
-          attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-          maxZoom={20}
-        />
-        
-        {mapData.map((location, index) => (
-          <Marker
-            key={index}
-            position={[location.lat, location.lon]}
-            eventHandlers={{
-              click: () => setSelectedMarket(location),
-            }}
-          >
-            {selectedMarket === location && (
-              <Popup onClose={() => setSelectedMarket(null)}>
-                <div className="p-2">
-                  <h3 className="font-bold">{location.name}</h3>
-                  <p className="text-sm">{location.type}</p>
-                  <button
-                    onClick={() => navigate(`/market/${location.id}`)}
-                    className="px-4 py-2 mt-3 w-full text-white bg-blue-500 rounded-lg hover:bg-blue-600"
-                  >
-                    View Details
-                  </button>
-                </div>
-              </Popup>
-            )}
-          </Marker>
-        ))}
-      </MapContainer>
+          </div>
+        </form>
+      </div>
+      
+      <div style={{ height: "100vh", width: "100%" }}>
+        <MapContainer
+          center={[center.lat, center.lng]}
+          zoom={13}
+          style={mapContainerStyle}
+          ref={setMapRef}
+          zoomControl={false}
+        >
+          <ZoomControl position="bottomright" />
+          <TileLayer
+            url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+            attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+            maxZoom={20}
+          />
+          
+          {mapData.map((location, index) => (
+            <Marker
+              key={index}
+              position={[location.lat, location.lon]}
+              eventHandlers={{
+                click: () => setSelectedMarket(location),
+              }}
+            >
+              {selectedMarket === location && (
+                <Popup onClose={() => setSelectedMarket(null)}>
+                  <div className="p-2">
+                    <h3 className="font-bold">{location.name}</h3>
+                    <p className="text-sm">{location.type}</p>
+                    <button
+                      onClick={() => navigate(`/market/${location.id}`)}
+                      className="px-4 py-2 mt-3 w-full text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </Popup>
+              )}
+            </Marker>
+          ))}
+        </MapContainer>
+      </div>
     </div>
   );
 };

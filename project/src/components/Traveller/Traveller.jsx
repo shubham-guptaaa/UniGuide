@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { SidebarContext } from '../SidebarContext/SidebarContext';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Footer/Footer';
+import Map from '../Map/Map';
 // import Header from '../Header/Header';
 // import { userTypes } from '../FeaturedContent/userTypes';
 
@@ -69,7 +70,7 @@ const Traveller = () => {
 
         {/* Guides Section */}
         <section className="mb-8">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 mr-2 ml-2">
             {guides.map((guide, index) => (
               <div key={index} className="p-4 text-center rounded-lg border border-gray-200">
                 <div className="mx-auto mb-3 w-16 h-16 bg-gray-200 rounded-full"></div>
@@ -82,7 +83,7 @@ const Traveller = () => {
 
         {/* Accommodations Section */}
         <section className="mb-8">
-          <h2 className="mb-4 text-lg font-bold">Accommodations</h2>
+          <h2 className="mb-4 ml-2 text-lg font-bold">Accommodations</h2>
           <div className="grid grid-cols-3 gap-5 mr-2 ml-2">
             {accommodations.map((accommodation, index) => (
               <button
@@ -125,10 +126,9 @@ const Traveller = () => {
 
         {/* Map Section */}
         <section className="mb-8">
-          <h2 className="mb-4 text-lg font-bold">Explorer Site (Map View)</h2>
-          <div className="flex justify-center items-center h-96 bg-gray-200 rounded-lg">
-            {/* Map integration would go here */}
-            <span className="text-gray-500">Map View</span>
+          <h2 className="mb-4 ml-2 text-lg font-bold">Explorer Site (Map View)</h2>
+          <div className="h-[600px] mr-2 ml-2 rounded-lg overflow-hidden">
+            <Map />
           </div>
         </section>
 

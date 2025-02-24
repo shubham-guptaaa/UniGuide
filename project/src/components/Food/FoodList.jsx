@@ -20,7 +20,9 @@ const FoodList = () => {
         </h1> */}
         <FoodCardList foodData={foodData.places} />
       </div>
+      <div className='mb-8 ml-60'>
       <Footer />
+      </div>
     </div>
   );
 };

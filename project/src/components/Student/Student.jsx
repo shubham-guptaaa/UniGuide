@@ -107,7 +107,7 @@ const Student = () => {
           {accommodations.map((accommodation, index) => (
             <button
               key={index}
-              className={`flex flex-col items-center p-12 w-full shadow-sm transition-colors rounded-lg hover:opacity-90 ${accommodation.bgColor}`}
+              className={`flex flex-col items-center p-12 w-full shadow-sm transition-colors rounded-lg hover:bg-slate-200 ${accommodation.bgColor}`}
               onClick={
                 accommodation.type === 'PG' 
                   ? handlePGClick 

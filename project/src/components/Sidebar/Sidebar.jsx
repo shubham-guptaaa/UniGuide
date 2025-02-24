@@ -8,7 +8,8 @@ import {
   MdLocationOn,
   MdNotifications,
   MdLanguage,
-  MdFastfood
+  MdFastfood,
+  MdTrackChanges
 } from 'react-icons/md';
 import { useSidebar } from '../SidebarContext/SidebarContext';
 
@@ -25,6 +26,7 @@ const Sidebar = () => {
     { title: 'Community', icon: <MdLanguage />, path: '/communities' },
     { title: 'Local Guide', icon: <MdDashboard />, path: 'LocalGuide'},
     { title: 'Notifications', icon: <MdNotifications />, path: '/notifications' },
+    { title: 'Track Application', icon: <MdTrackChanges />, path: '/track' },
   ];
 
   return (

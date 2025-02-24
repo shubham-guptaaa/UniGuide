@@ -6,7 +6,7 @@ const DharamshalaCard = ({ dharamshala }) => {
     <div className="overflow-hidden bg-white rounded-lg border border-gray-200 shadow-md transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
       <div className="overflow-hidden w-full h-60">
         <img 
-          src={dharamshala.image || "https://placeholder.com/400x300"}
+          src={dharamshala.contact_info.image || "https://placeholder.com/400x300"}
           alt={dharamshala.name} 
           className="object-cover w-full h-full"
         />

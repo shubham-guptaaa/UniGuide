@@ -6,7 +6,7 @@ const HotelCard = ({ hotel }) => {
     <div className="overflow-hidden bg-white rounded-lg border border-gray-200 shadow-md transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
       <div className="overflow-hidden w-full h-48">
         <img
-          src={hotel.image_url}
+          src={hotel.image}
           alt={hotel.hotel_name}
           className="object-cover w-full h-full"
         />

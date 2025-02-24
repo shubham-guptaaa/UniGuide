@@ -19,6 +19,8 @@ import Communities from './pages/Communities/Communities';
 import LocalGuide from './components/LocalGuide/LocalGuide';
 import FoodList from './components/Food/FoodList';
 import Notification from './components/Notification/Notification';
+import Profile from './pages/profile/Profile';
+import Track from './pages/Track/Track';
 
 function App() {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
@@ -65,6 +67,8 @@ function App() {
                 <Route path="/LocalGuide" element={<LocalGuide />} />
                 <Route path="/famousfood" element={<FoodList />} />
                 <Route path="/notifications" element={<Notification />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/track" element={<Track />} />
               </Routes>
             </div>
           </Router>

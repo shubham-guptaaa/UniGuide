@@ -32,8 +32,25 @@ const LocalGuide = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    
+    // Generate a unique tracking ID with 4 digits
+    const randomNum = Math.floor(1000 + Math.random() * 9000); // generates number between 1000-9999
+    const trackingId = `APP-${randomNum}`;
+    
+    // Combine all form data
+    const submissionData = {
+      ...formData,
+      phoneNumber,
+      trackingId,
+      submissionDate: new Date().toISOString(),
+      status: 'pending'
+    };
+
+    // TODO: Send to backend API
+    console.log('Form submitted:', submissionData);
+
+    // Show tracking ID to user
+    alert(`Your application has been submitted!\nTracking ID: ${trackingId}\nUse this ID to track your application status.`);
   };
 
   return (

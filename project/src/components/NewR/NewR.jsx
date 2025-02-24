@@ -105,7 +105,10 @@ const NewR = () => {
           ))}
         </div>
       </div> */}
+      <div className='flex flex-col mb-8 min-h-screen'>
+        
       <Footer />
+      </div>
     </div>
   );
 };

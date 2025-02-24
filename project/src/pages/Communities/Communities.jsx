@@ -106,7 +106,7 @@ const Communities = () => {
       {/* Upcoming Events */}
       <section>
         <h3 className="mb-4 text-2xl font-semibold">Upcoming Events</h3>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 mb-2 md:grid-cols-2 lg:grid-cols-3">
           {upcomingEvents.map(event => (
             <div key={event.id} className="p-6 bg-white rounded-lg shadow-md transition-shadow hover:shadow-lg">
               <div className="flex gap-2 items-center mb-4">
